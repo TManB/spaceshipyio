@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "node": "ng build && ts-node-dev server/server.ts",
+    "node": "ng build --aot && ts-node-dev server/server.ts",
     "serve": "concurrently \"ng serve\" \"ts-node-dev server/server.ts\""
   },
   "private": true,
@@ -37,6 +37,8 @@
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
+    "@types/socket.io": "^2.1.0",
+    "@types/socket.io-client": "^1.4.32",
     "codelyzer": "~4.5.0",
     "concurrently": "^4.0.1",
     "jasmine-core": "~2.99.1",

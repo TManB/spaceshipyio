@@ -4,11 +4,14 @@ var express = require('express');
 var app = express();
 var serv = require('http').Server(app);
 
-app.get('/',function(req, res) {
+app.use('', express.static(__dirname + '/public'));
+
+
+// MUST BE LAST
+app.get('*',function(req, res) {
     console.log("incoming req");
 	res.sendFile(__dirname + '/public/index.html');
 });
-app.use('/',express.static(__dirname + '/public'));
 
 serv.listen(2000);
 console.log("server started port 2000");
